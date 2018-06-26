@@ -1,0 +1,45 @@
+1:脱机模式，不自动登陆
+2：脱机模式，不自动联网
+3：脱机模式不检测系统升级
+
+
+8:下载GSYplayer 的版本，有新版本和旧版本之分
+
+17:所有判断GSy下载的URL都要判断单曲概念软件版本
+18:本地视屏，socketFile 常量引用
+19：localVideoFragment SockUpdate 包名常量引用
+20: 投屏信息，開飯熱點注釋, 二维码默认图片需更改
+21:热点界面，投屏信息会进入 ，设置界面会进入
+22:网络监听广播，检查
+23:设置界面，遥控问题
+24:关机时间比实际时间要快几分钟，会在进行一次开关机操作。
+
+
+
+
+        //鼠标触动事件
+        btn_buttom.setOnHoverListener(new OnHoverListener() {
+            @Override
+            public boolean onHover(View view, MotionEvent motionEvent) {
+                int what = motionEvent.getAction();
+                switch (what) {
+                    case MotionEvent.ACTION_HOVER_ENTER:  //鼠标进入view
+                        changeView(true);
+                        break;
+                    case MotionEvent.ACTION_HOVER_EXIT:  //鼠标离开view
+                        changeView(false);
+                        break;
+                }
+                return false;
+            }
+        });
+
+//        public static final int GONE = 8;
+//        public static final int INVISIBLE = 4;
+//        public static final int VISIBLE = 0;
+
+        public static final int FILL_PARENT = -1;
+        public static final int MATCH_PARENT = -1;
+        public static final int WRAP_CONTENT = -2;
+
+CacheManager  这个功能暂时取消。后续持续更近

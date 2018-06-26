@@ -1,0 +1,18 @@
+2:AppConfig         isDubug = false 上线模式改成 SharedManager.getDebug
+3:AppConfig         EQUIP_TYPE =  根据当前软件版本选择
+4：Build.gradle     检查版本号，版本日期
+4.1BUild.gradle     根据软件版本 ，修改包名
+
+5：清单文件         一代产品 注释   <category android:name="android.intent.category.HOME" />
+                    二代產品 取消注釋   <category android:name="android.intent.category.HOME" />
+
+                    二代產品，取消注釋
+                     <!--android:sharedUserId="android.uid.system"-->
+                     <!--<category android:name="android.intent.category.HOME" />-->
+                     <!--<category android:name="android.intent.category.DEFAULT" />-->
+                     <!--<category android:name="android.intent.category.MONKEY" />-->
+
+ 6：一代產品需要簽名文件
+    二代不需要簽名，需要系統單獨簽名
+
+

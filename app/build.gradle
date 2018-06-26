@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    useLibrary 'org.apache.http.legacy'  //Xutil的申明
+
+    //老设备  com.magicmirrormedia.mirrorclient.activity
+    //新设备  com.example.gsyvideoplayer
+    //        magicmirrormedia
+    defaultConfig {
+        applicationId "com.example.gsyvideoplayer"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 40
+        versionName "2.05.16"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+
+//        def alias = "magicmirrormedia"
+//        def password = "magicmirrormedia"
+//        def filePath = "D:/资料/key/magicmirrormedia_key_as.jks"  //签名文件路径 如：../faceprint.jks
+//
+//        debug {
+//            keyAlias alias
+//            keyPassword password
+//            storeFile file(filePath)
+//            storePassword(password)
+//        }
+//        release {
+//            keyAlias alias
+//            keyPassword password
+//            storeFile file(filePath)
+//            storePassword(password)
+//        }
+    }
+
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile files('libs/xUtils-2.6.14.jar')
+    //网络请求
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    //二维码
+    compile 'cn.yipianfengye.android:zxing-library:2.2'
+    //权限检查
+    compile 'me.weyye.hipermission:library:1.0.3'
+    compile 'com.youth.banner:banner:1.4.10'
+    compile 'com.google.code.gson:gson:2.7'
+    compile project(':adviewviewbapger')
+    compile project(':litepal')
+}

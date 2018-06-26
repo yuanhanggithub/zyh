@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rect_circle"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_content"
+            android:layout_width="600.0dip"
+            android:layout_height="300.0dip"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:scaleType="fitXY"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15.0dip"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:layout_width="0.0dip"
+                android:layout_height="40.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_fouces_style"
+                android:text="取消"
+                android:textColor="@color/white"></Button>
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_width="0.0dip"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_fouces_style"
+                android:text="退出"
+                android:textColor="@color/white"></Button>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

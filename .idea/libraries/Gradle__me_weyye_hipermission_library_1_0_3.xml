@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: me.weyye.hipermission:library-1.0.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/b9594129af700b03ad9641e35e1c8e638620529e/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/b9594129af700b03ad9641e35e1c8e638620529e/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

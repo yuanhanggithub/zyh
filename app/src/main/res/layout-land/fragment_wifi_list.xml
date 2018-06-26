@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="600dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/refresh_list_btn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/rect_circle_app_style"
+                android:gravity="center"
+                android:text="刷新"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_25" />
+
+            <Button
+                android:id="@+id/btn_answer"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:background="@drawable/rect_circle_app_style"
+                android:gravity="center"
+                android:text="？"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_25" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_add_wifi"
+            android:layout_width="@dimen/dimen_100"
+            android:layout_height="@dimen/dimen_40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rect_circle_app_style"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_25" />
+    </RelativeLayout>
+
+    <com.mirror.view.recycle.SWRecyclerView
+        android:id="@+id/recycle_link_alread"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_10" />
+
+    <com.mirror.view.recycle.SWRecyclerView
+        android:id="@+id/wifi_list"
+        android:layout_width="600dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

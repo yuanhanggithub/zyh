@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/iv_title_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:background="@mipmap/icon_main_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:background="@mipmap/fragment_main_bgg">
+
+        <com.mirror.view.ButtonAnimalView
+            android:id="@+id/btn_video"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="80.0dip"
+            android:nextFocusRight="@+id/btn_degital"
+            app:textdesc="影音娱乐"
+            app:textsize="35.0sp" />
+
+        <com.mirror.view.ButtonAnimalView
+            android:id="@+id/btn_degital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="210dp"
+            android:nextFocusLeft="@id/btn_video"
+            android:nextFocusRight="@+id/btn_beauty_news"
+            app:textdesc="检测护理"
+            app:textsize="35.0sp" />
+
+        <com.mirror.view.ButtonAnimalView
+            android:id="@+id/btn_beauty_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="450dp"
+            android:layout_marginTop="80dp"
+            android:nextFocusLeft="@id/btn_degital"
+            android:nextFocusRight="@+id/btn_vr_photo"
+            app:textdesc="美业资讯"
+            app:textsize="35.0sp" />
+
+        <com.mirror.view.ButtonAnimalView
+            android:id="@+id/btn_vr_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="620.0dip"
+            android:layout_marginTop="210.0dip"
+            android:nextFocusLeft="@id/btn_beauty_news"
+            app:textdesc="VR发型库"
+            app:textsize="36.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="570.0dip"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:text="MOB : 130-3981-3981"
+            android:textColor="@color/color_app"
+            android:textSize="22.0sp" />
+
+        <ImageView
+            android:id="@+id/iv_line_animal"
+            android:layout_width="170.0dip"
+            android:layout_height="6.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:focusable="false" />
+    </RelativeLayout>
+</RelativeLayout>
